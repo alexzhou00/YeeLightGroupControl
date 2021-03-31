@@ -1,0 +1,11 @@
+on: True
+mode: 1
+h: 0
+s: 0
+brightness: 10
+degrees: 2600
+r: 255
+g: 255
+b: 255
+group_name: bedroom
+names: bedroom1
