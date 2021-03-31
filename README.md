@@ -6,7 +6,7 @@ I want to be able to use this library in order to control multiple groups of lig
 
 ## TODO
 * Testing with multiple bulbs
-* Saving / Loading configs
-* Bulb naming utility
+* Testing bulb naming utility
 * Listening for key-presses / macros to activate some desired behavior
+  * Controller should listen for keypresses and be able to modify multiple groups at the same time
 * Reconnecting to bulbs that restarted/disconnected
