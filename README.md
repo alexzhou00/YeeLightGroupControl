@@ -16,3 +16,4 @@ I want to be able to use this library in order to control multiple groups of lig
 * Add more loading/saving config file functionality
 * Lighting Presets
 * Documentation
+  * requirements.txt
