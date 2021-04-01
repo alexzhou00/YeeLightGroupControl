@@ -19,6 +19,7 @@ class LightGroup():
         if loadfile:
             self.load_state()
         else:
+            self.loadfile = group_name + '_latest.txt'
             self.turn_on()
             self.on = True 
             self.h = 0
@@ -143,9 +144,9 @@ class LightGroup():
 
     def set_rgb(self, r, g, b):
         self.mode = yl.PowerMode.RGB
-        r = min(255, max(255, r))
-        g = min(255, max(255, g))
-        b = min(255, max(255, b))
+        r = min(255, max(0, r))
+        g = min(255, max(0, g))
+        b = min(255, max(0, b))
         self.r, self.g, self.b = r, g, b
 
         # Rate limit commands 
@@ -163,10 +164,10 @@ class LightGroup():
     def incr_r(self, step=5):
         self.set_rgb(self.r+step, self.g, self.b)
         
-    def incr_b(self, step=5):
+    def incr_g(self, step=5):
         self.set_rgb(self.r, self.g+step, self.b)
     
-    def incr_g(self, step=5):
+    def incr_b(self, step=5):
         self.set_rgb(self.r, self.g, self.b+step)
     
     def decr_r(self, step=5):
@@ -253,7 +254,7 @@ class LightGroup():
     def save_state(self, filename=None):
         assert self.loadfile is not None or filename is not None
         if filename is None:
-            filename = self.loadfile 
+            filename = self.loadfile
         
         d = {}
         d['on'] = self.on
