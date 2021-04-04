@@ -6,6 +6,10 @@ Bulbs to-be-named will be set to full brightness.")
 
 bulb_dicts = yl.discover_bulbs()
 
+if len(bulb_dicts) == 0:
+    print('No bulbs found! Exiting...')
+    exit(0)
+
 bulbs = []
 
 for bulb_dict in bulb_dicts:
@@ -20,7 +24,7 @@ for bulb in bulbs:
 for bulb in bulbs:
     bulb.set_brightness(100)
     ans = input("Current name of bulb is '{}'. Would you like to change it? (y/n): ".format(bulb.get_properties()['name']))
-    ans = ans.lower 
+    ans = ans.lower()
     if ans == 'y' or ans == 'yes':
         name = input("What would you like the new name to be? ")
         bulb.set_name(name)

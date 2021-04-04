@@ -10,10 +10,7 @@ I want to be able to use this library in order to control multiple groups of lig
 
 ## TODO
 * Testing with multiple bulbs
-* Testing with multiple groups
-* Testing bulb naming utility
 * Reconnecting to bulbs that restarted/disconnected
 * Add more loading/saving config file functionality
 * Lighting Presets
 * Documentation
-  * requirements.txt

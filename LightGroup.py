@@ -47,6 +47,7 @@ class LightGroup():
             The current mode of the LightGroup
         """
         assert state is None or state == '0' or state == 1
+        target = None
         for bulb in self.bulbs:
             try:
                 bulb.get_properties()
